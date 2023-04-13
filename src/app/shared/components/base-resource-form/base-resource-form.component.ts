@@ -22,7 +22,7 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
   protected formBuilder: FormBuilder;
 
   constructor(
-    private injector: Injector,
+    protected injector: Injector,
     public resource: T,
     protected resourceService: BaseResourceService<T>,
     protected jsonDataToResource: ( jsonData ) => T
