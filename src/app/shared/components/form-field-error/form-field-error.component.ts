@@ -4,8 +4,8 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-form-field-error',
   template: `
-    <p>
-      form-field-error works!
+    <p class="text-danger">
+      {{errorMessage}}
     </p>
   `,
   styleUrls: ['./form-field-error.component.css']
@@ -33,7 +33,7 @@ export class FormFieldErrorComponent implements OnInit {
   }
 
   private getErrorMessage(): string | null {
-      if ( this.formControl.errors.requied ) {
+      if ( this.formControl.errors.required ) {
         return 'required';
 
       } else if ( this.formControl.errors.email ) {
