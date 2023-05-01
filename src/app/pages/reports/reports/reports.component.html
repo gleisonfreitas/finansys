@@ -1,3 +1,101 @@
-<p>
-  reports works!
-</p>
+<app-bread-crumb
+  [items]="[{text: 'Revenues and expenses reports'}]"
+></app-bread-crumb>
+
+<app-page-header
+  page-title="Revenues and expenses reports"
+></app-page-header>
+
+<div class="card">
+
+  <div class="card-header">
+    Select the Month and Year
+  </div>
+
+  <div class="card-body">
+    <div class="form-row">
+      <div class="form-group col-md-7">
+        <label for="month">Month</label>
+        <select #month name="month" id="month" class="form-control">
+          <option value="">select the month</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-5">
+        <label for="year">Year</label>
+        <select #year name="year" id="year" class="form-control">
+          <option value="">select the year</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-md">
+        <button type="button" (click)="generateReports()" class="btn btn-primary float-right">Generate Reports</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card-deck mt-5 mb-5">
+  <div class="card text-center text-white bg-success">
+    <div class="card-header">
+      Total Revenues
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">
+        1500
+      </h3>
+    </div>
+  </div>
+
+  <div class="card text-center text-white bg-danger">
+    <div class="card-header">
+      Total Expenses
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">
+        500
+      </h3>
+    </div>
+  </div>
+
+  <div class="card text-center text-white bg-info">
+    <div class="card-header">
+      Balance
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">
+        1000
+      </h3>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="row mt-5 mb-5">
+  <div class="col-md-6">
+    Revenues Chart
+  </div>
+  <div class="col-md-6">
+    Expenses Chart
+  </div>
+</div>
